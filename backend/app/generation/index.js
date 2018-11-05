@@ -6,6 +6,7 @@ const refreshRate = REFRESH_RATE * SECONDS;
 class Generation {
     constructor(){
         this.expiration = this.caluclateExpiration();
+        this.generationId = undefined;
     }
     caluclateExpiration(){
         const expirationPeriod = Math.floor(Math.random() * (refreshRate/2) );
@@ -16,7 +17,7 @@ class Generation {
         if(Date.now > this.expiration){
             throw new Error(`This Generation Expired on ${this.expiration}`)
         }
-        return new Dragon()
+        return new Dragon({generationId: this.generationId});
     }
 }
 
