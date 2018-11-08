@@ -1,5 +1,5 @@
 CREATE TABLE trait(
-    id           SERIAL PRIMARY KEY,
-    "traitType"  VARCHAR NOT NULL,
-    "traitValue" VARCHAR NOT NULL
+  id           SERIAL PRIMARY KEY,
+  "traitType"  VARCHAR NOT NULL,
+  "traitValue" VARCHAR NOT NULL
 );
